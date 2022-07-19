@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Slot Parent">
+<h1>1.Parent Header</h1>
+<c-slot-Child>
+    <p>5.deger</p>
+    <h1>6.bakalım</h1>
+</c-slot-Child>
+ <div>4.Parent paragraf</div>
+
+ <c-slot-child-named>
+    <span slot="father">Tim</span>
+    <span slot="mother">Jessica</span>
+    <span slot="son">Sam</span>
+    <h1>slot deneme</h1>
+ </c-slot-child-named>
+
+
+<lightning-input type="text" label="Country" onchange={handleCountry}></lightning-input>
+<lightning-input type="text" label="City" onchange={handleCity}></lightning-input>
+<lightning-input type="text" label="Famous For " onchange={handleFamousFor}></lightning-input>
+<c-slo-named-details>
+    <span slot="country">{country}</span>
+    <span slot="city">{city}</span>
+    <span slot="famousFor">{famousFor}</span>
+</c-slo-named-details>
+    </lightning-card>
+   
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="if true konusu">
+        <h1>Flag : {flag}</h1>
+        <template if:true={flag}>
+            <h1>Flag dogru oldugunda gorulecek</h1>
+        </template>
+        
+    </lightning-card>
+    <lightning-card title="Checbox Render">
+        <h1>Kabul edildi : {kabulEdildi}</h1>
+        <!-- kabulEdidi = true ise gosterme: <h1>Lutfen sozlesmeyi kabul edin</h1> -->
+         <!-- kabulEdidi = false ise goster: <h1>Lutfen sozlesmeyi kabul edin</h1> -->
+        <template if:false={kabulEdildi}>
+            <h1>Lutfen sozlesmeyi kabul edin</h1>
+        </template>
+        <lightning-input type="checkbox" label="Kabul Et" onchange={handleChange}></lightning-input>
+    </lightning-card>
+    
+</template>

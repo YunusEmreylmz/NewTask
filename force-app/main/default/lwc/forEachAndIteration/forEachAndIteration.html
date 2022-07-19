@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Musteri listesi">
+<ul>
+    <template for:each={customerList} for:item="Müşteriler">
+<li key={customerList.Id}>
+<h1>{Müşteriler.Id}</h1>
+<h1>{Müşteriler.Name}</h1>
+<h1>{Müşteriler.phone}</h1>
+<h1>{Müşteriler.email}</h1>
+<img src={Müşteriler.imgURL} alt="">
+</li>
+    </template>
+</ul>
+    </lightning-card>
+
+    <lightning-card title="Iterator">
+<template iterator:it={sehirisimleri}>
+<p key={it.value}>{it.value}</p>
+</template>
+    </lightning-card>
+</template>

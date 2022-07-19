@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Hello World Card">
+        <h1 style="color:red; background-color:yellow">Hello World</h1>
+        <h1>Hello Word</h1>
+        <h2 class="h2-style">Iyiyim sen nasilsin</h2>
+        <h1 style="color:red; background-color:yellow">Hello {greeting}</h1>
+
+    </lightning-card>
+    <lightning-card title="Oninput">
+<h1>isim : {isim}</h1>
+<input type="text" oninput={handleinput}>
+    </lightning-card>
+
+    <lightning-card title="onchange">
+        <h1>soyisim : {soyisim}</h1>
+        <lightning-input type="text" label="Soyisim girin" onchange={onchangehandler}></lightning-input>
+    </lightning-card>
+
+    <lightning-card>
+        <h1>ulke : {ulke}</h1>
+        <lightning-input type="text" label="Ulke isim girin" onblur={onblurhandler}></lightning-input>
+    </lightning-card>
+
+<lightning-card title="getter">
+    <h1>{fname} {lname}</h1>
+<h1>{fullUpperCase}</h1>
+</lightning-card>
+
+<lightning-card title="islemler">
+    <lightning-input type="Number" label="Num1" onchange={handleNum1}></lightning-input>
+    <lightning-input type="text"  label="Num2" onchange={handleNum2}></lightning-input>
+    <h1>{num1} + {num2} = {toplam} </h1>
+
+</lightning-card>
+
+</template>

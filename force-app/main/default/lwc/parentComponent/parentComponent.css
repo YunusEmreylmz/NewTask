@@ -1,0 +1,6 @@
+h1{
+    color: aqua;
+} 
+c-child-component h1{
+    color: brown;
+}

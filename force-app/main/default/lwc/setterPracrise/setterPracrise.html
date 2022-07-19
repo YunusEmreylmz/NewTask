@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Setter">
+        <lightning-input type="number"
+        label="Enter New Age"
+        value={newAge}
+        onchange={updateAge}></lightning-input>
+        <h1>Name : {name}</h1>
+        <h1>Age : {age}</h1>
+        <lightning-button label="Update Age"
+        onclick={updateOriginalAge}></lightning-button>
+    </lightning-card>
+</template>

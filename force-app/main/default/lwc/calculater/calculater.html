@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Hesap Makinesi">
+        <lightning-input type="number" name="number1" label="Number 1" onchange={numberHandler}></lightning-input> <br>
+        <lightning-input type="number" name="number2" label="Number 2" onchange={numberHandler}></lightning-input> <br>
+        <lightning-button-group>
+            <lightning-button label="Topla" variant="inverse" onclick={toplaClickHandler}></lightning-button>
+            <lightning-button label="Çıkart" variant="inverse" onclick={cikartClickHandler}></lightning-button>
+            <lightning-button label="Çarp" variant="inverse" onclick={carpClickHandler}></lightning-button>
+            <lightning-button label="Böl" variant="inverse" onclick={bolClickHandler}></lightning-button>
+        </lightning-button-group>  <br>
+        <h1>Sonuc:{result}</h1>
+<lightning-input type="checkbox" label="Önceki sonucu göster" onchange={preresulthandler}></lightning-input>
+<template if:true={showpreviousresult}>
+  <ul>
+            <template for:each={previousResults} for:item="preresult">
+<li key={preresult.value}>Önceki sonuc:  {preresult} </li> 
+            </template>
+        </ul>
+</template>
+      
+        
+    </lightning-card>
+</template>
