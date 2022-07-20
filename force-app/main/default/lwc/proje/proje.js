@@ -1,16 +1,19 @@
 import { LightningElement,wire,api,track } from 'lwc';
-import getExam from '@salesforce/apex/contactnamereturn.getExam'
+/* import getExam from '@salesforce/apex/contactnamereturn.getExam'
+ */import getQuestion from '@salesforce/apex/contactnamereturn.getQuestion'
 
 export default class Proje extends LightningElement {
 @track data=[];
 @track columns = [
     { label: 'Label', fieldName: 'Name' },
-    { label: 'Total Score', fieldName: 'Score__c'},
+    { label: 'Total Score', fieldName: 'Total_Score__c'},
     
 ];
 @api recordId;
+/* @wire(getExam, {contactId:'$recordId'}) exams; */
+
 connectedCallback(){
-getExam({contactId:this.recordId})
+getQuestion({contactId:this.recordId})
 .then(response => {
     this.data=response;
 })

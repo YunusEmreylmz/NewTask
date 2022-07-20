@@ -1,0 +1,19 @@
+<template>
+<lightning-card>
+<lightning-accordion allow-multiple-sections-open={multiple}>
+        <template if:true={exams}>
+            <template for:each={exams} for:item="exam">
+                <lightning-accordion-section name={exam.Name} label={exam.Name} key={exam.Id}>
+                    <template for:each={exam.Questions__r} for:item="qsc">
+                        <lightning-accordion-section name={qsc.Name} label={qsc.Name} key={qsc.Id}>
+                            {con.Name} {qsc.Score__c}
+                        </lightning-accordion-section>
+                    </template>
+
+                </lightning-accordion-section>
+            </template>
+        </template>
+    </lightning-accordion>
+</lightning-card>
+    
+</template>
